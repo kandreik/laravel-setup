@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ЛР 3 — файли</title>
+</head>
+<body>
+    <h1>Лабораторна робота №3. Файли та файлова структура</h1>
+
+    <h3>Завдання 1–4. Завантаження файлу на сервер</h3>
+    <!-- Без enctype="multipart/form-data" вміст файлу на сервер не передається -->
+    <form action="process.php" method="post" enctype="multipart/form-data">
+        <!-- Прихованe поле MAX_FILE_SIZE (у байтах) — підказка для PHP; основна перевірка все одно в process.php -->
+        <input type="hidden" name="MAX_FILE_SIZE" value="2097152">
+        <input type="file" name="picture">
+        <button type="submit">Надіслати файл</button>
+        <p><small>Приймаються зображення png, jpg, jpeg розміром до 2 МБ.</small></p>
+    </form>
+
+    <h3>Завдання 5. Запис у текстовий файл</h3>
+    <form action="text.php" method="post">
+        <textarea name="note" rows="3" cols="45" placeholder="Введіть текст"></textarea><br>
+        <button type="submit">Зберегти в log.txt</button>
+    </form>
+
+    <h3>Завдання 6. Файлова структура</h3>
+    <p><a href="list.php">Переглянути вміст директорії</a></p>
+
+    <p><a href="../menu.html">Меню</a></p>
+</body>
+</html>

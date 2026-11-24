@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ЛР 1 — форма</title>
+</head>
+<body>
+    <h1>Завдання 7. Робота з формами</h1>
+
+    <!-- method="post": дані передаються в тілі HTTP-запиту; action: файл, який їх обробить -->
+    <form method="post" action="process.php">
+        <label>Ім'я<br>
+            <!-- значення цього поля прийде на сервер як $_POST["name"] -->
+            <input type="text" name="name" maxlength="40">
+        </label>
+        <br><br>
+        <label>Прізвище<br>
+            <input type="text" name="surname" maxlength="40">
+        </label>
+        <br><br>
+        <button type="submit">Привітатися</button>
+    </form>
+
+    <p><a href="syntax.php">Завдання 1–6</a> · <a href="../menu.html">Меню</a></p>
+</body>
+</html>
